@@ -5,7 +5,7 @@ from tkinter import messagebox
 import pyperclip
 import customtkinter as ctk
 
-# connexion à la base de donnée sqlite
+# Connexion à la base de donnée sqlite
 db_connection = sqlite3.connect("database.sqlite")
 db_cursor = db_connection.cursor()
 
@@ -34,8 +34,7 @@ def window(container) -> None:
             Returns:
                 dict: Un dictionnaire où les clés sont les noms des options de
                     caractères (par exemple, "LatinUpperAlphabet") et les valeurs
-                    sont des entiers représentant l'état de la case à cocher
-                    (probablement 1 pour coché et 0 pour non coché).
+                    sont des entiers représentant l'état de la case à cocher.
             """
         check_password_options = {
             "LatinUpperAlphabet": checkbox_latin_uppercase_letters.get(),
